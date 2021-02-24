@@ -11,8 +11,8 @@ app.use(cors());
 const svg = require('./database/svg')
 
 app.get('/getSvg/:nome', svg.getSVG);
-app.get('/getViewBox/:nome',svg.getViewBox);
+app.get('/getViewBox/:nome', svg.getViewBox);
 
-app.listen(process.env.PORT, () => { 
-  console.log(`Server listening on port ${process.env.PORT}`); 
+app.listen(process.env.PORT, () => {
+  console.log(`Server listening on port ${process.env.PORT}`);
 });
