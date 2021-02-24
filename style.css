@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 242, 242);
+    height: 100vh;
+}
+
+header {
+    background-color: rgb(92, 92, 92);
+}
+
+header h1 {
+    padding: 5vh 0;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font: 800 3rem "Prompt", Arial, sans-serif;
+}
+
+#svg-section {
+    margin-top: 3.2rem;
+}
+
+svg {
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    box-shadow: 2px 2px rgb(172, 172, 172);
+}
+
+#span {
+    color: teal;
+    font-size: 2rem;
+}
+
+#search-city {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    font-size: 1rem;
+    margin: 1.5rem 0.3rem;
+    padding-left: 12px;
+    height: 1.8rem;
+    width: 25vw;
+    border: 1px solid teal;
+    border-radius: 0.4rem;
+    transition: all 0.1s linear;
+    outline: none;
+}
+
+input:focus {
+    width: 30vw;
+}
+
+button {
+    height: 1.9rem;
+    width: 3.7rem;
+    color: white;
+    font: 400 1rem "Propmt", Arial, sans-serif;
+    text-align: center;
+    background-color: teal;
+    border: none;
+    border-radius: 0.7rem;
+    opacity: 0.8;
+    outline: none;
+}
+
+button:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+@media(max-width: 940px) {
+    header h1 {
+        padding: 4vw 0;
+        font: 800 2rem "Prompt", Arial, sans-serif;
+    }
+
+    #ipt {
+        font-size: 0.78rem;
+        padding-left: 8px;
+        height: 2.5rem;
+        width: 50vw;
+    }
+    #ipt:focus {
+        width: 55vw;
+    }
+
+    #btn {
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+}
