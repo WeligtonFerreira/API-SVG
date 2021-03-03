@@ -12,7 +12,7 @@ DB_PASSWORD={senha do postgres}
 DB_HOST={host do postgis no docker}
 DB_PORT={porta do postgis no docker} 
 DB_DATABASE={nome do banco - case sensitive}
-PORT={porta que a API irá utilizar}
+PORT={porta que a API irá utilizar (não use 3000, pois o front-end utilizará ela)}
 
 3 - npm i
 4 - npm start
