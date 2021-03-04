@@ -1,13 +1,13 @@
 import './App.css';
 import { Component } from 'react';
-import api from './services/api';
+import api from './services/api.js';
 
 export default class App extends Component {
 
   state = {
     cidade: '',
     path: '',
-    viewBox: '',
+    viewBox: '0 0 0 0',
     alertDisplay: 'none',
   }
 
@@ -16,10 +16,11 @@ export default class App extends Component {
     const { cidade } = this.state;
 
     try {
-      const response = await api.get(`/getSvg/${cidade}`);
+      const response = await api.get(`getSvg/${cidade}`);
       this.setState({ path: response.data[0].st_assvg });
       this.getViewBox();
     } catch (err) {
+      console.log(err);
       this.setState({ alertDisplay: 'flex' });
     }
   }
@@ -29,7 +30,7 @@ export default class App extends Component {
     const { cidade } = this.state;
 
     try {
-      const response = await api.get(`/getViewBox/${cidade}`);
+      const response = await api.get(`getViewBox/${cidade}`);
       this.setState({ viewBox: response.data[0].getviewbox });
     } catch (err) {
       window.alert('Ocorreu um erro ao tentar encontrar a ViewBox');
@@ -57,7 +58,7 @@ export default class App extends Component {
 
         <section id="svg-section">
           <svg width="300" height="300" viewBox={viewBox}>
-            <path d={path} fill="lightseagreen" stroke="black" stroke-width="0.0025" />
+            <path d={path} fill="lightseagreen" stroke="black" strokeWidth="0.0025" />
           </svg>
         </section>
 
